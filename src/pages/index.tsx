@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Flex,
   Grid,
   GridItem,
@@ -212,6 +213,31 @@ export default function Home() {
           </Flex>
         </GridItem>
       </Grid>
+      <Flex
+        gap="48px"
+        align="center"
+        direction="column"
+        justifyContent="center"
+        my="20"
+      >
+        <Divider
+          borderBottomWidth="2px"
+          height="5px"
+          width="90px"
+          size="2px"
+          borderBottomColor="#000"
+        />
+        <Flex
+          fontSize="36"
+          direction="column"
+          gap="10px"
+          align="center"
+          justify="center"
+        >
+          <Text>Vamos nessa?</Text>
+          <Text>Então escolha seu continente</Text>
+        </Flex>
+      </Flex>
       <Box w={["100%", "90%"]} m="auto" mb={32}>
         <Swiper
           pagination={true}
@@ -223,47 +249,25 @@ export default function Home() {
             {" "}
             <Box
               height={["163px", "335px"]}
-              backgroundImage={`url(images/banner/Background.png)`}
+              backgroundImage={`url(images/continents/europe3.jpg)`}
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
-              filter="brightness(70%)"
+              backgroundPosition="initial"
             >
               <Flex
-                pl={["16px", "140px"]}
-                pr={["16px", "0"]}
-                justifyContent={["center", "start"]}
-                height="100%"
+                h="100%"
                 align="center"
+                justifyContent="center"
+                direction="column"
                 position="relative"
+                filter="none"
               >
-                <Box>
-                  <VStack maxWidth={524} spacing={["8px", "24px"]}>
-                    <Text
-                      fontWeight="medium"
-                      color="gray.50"
-                      fontSize={["20px", "36px"]}
-                    >
-                      5 Continentes, infinitas possibilidades.
-                    </Text>
-                    <Text
-                      fontWeight="medium"
-                      color="gray.200"
-                      fontSize={["14px", "20px"]}
-                    >
-                      Chegou a hora de tirar do papel a viagem que você sempre
-                      sonhou.{" "}
-                    </Text>
-                  </VStack>
-                </Box>
-                {!!isWideScreem && (
-                  <Box
-                    position="absolute"
-                    right={140}
-                    top="20"
-                    as="img"
-                    src="images/banner/Airplane.png"
-                  />
-                )}
+                <Text fontWeight="bold" color="#FFF" fontSize="48px">
+                  Europa
+                </Text>
+                <Text color="#FFF" fontWeight="bold">
+                  O continente mais antigo
+                </Text>
               </Flex>
             </Box>
           </SwiperSlide>
@@ -368,6 +372,7 @@ export default function Home() {
               backgroundImage={`url(images/banner/Background.png)`}
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
+              filter="brightness(50%)"
             >
               <Flex
                 pl={["16px", "140px"]}
