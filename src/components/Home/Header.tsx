@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Icon } from "@chakra-ui/react";
+import { Box, Flex, Link as ChakraLink, Icon } from "@chakra-ui/react";
 import IconBack from "../../public/images/back.svg";
 import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from "next/router";
@@ -18,7 +18,9 @@ export function Header({}) {
     >
       {asPath !== "/" ? (
         <Link passHref href="/">
-          <Icon fontSize={32} as={IoIosArrowBack} />
+          <ChakraLink>
+            <Icon fontSize={32} as={IoIosArrowBack} />
+          </ChakraLink>
         </Link>
       ) : (
         <Box />
